@@ -10,9 +10,22 @@ and open the template in the editor.
         <title>Hello World</title>
     </head>
     <body>
-        <form method="post" action="prenom.php">              
+        <form method="post" >              
             Prénom : <input type="text" name="prenom" size="12"> 
-            <input type="submit" value="OK"> 
-        </form>
+            <input type="submit" value="OK" onclick="bonjour()"> 
+        </form>   
+
+        <?php
+        if (!empty($_POST)) {
+            function bonjour($prenom) {
+                
+                return "Hello $prenom ";
+            }
+
+            $prenom = bonjour($_POST['prenom']);
+            echo $prenom;
+            
+        }
+        ?>
     </body>
 </html>
