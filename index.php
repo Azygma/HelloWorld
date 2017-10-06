@@ -10,8 +10,9 @@ and open the template in the editor.
         <title>Hello World</title>
     </head>
     <body>
-        <?php
-        echo "Hello les licornes!!"
-        ?>
+        <form method="post" action="prenom.php">              
+            Prénom : <input type="text" name="prenom" size="12"> 
+            <input type="submit" value="OK"> 
+        </form>
     </body>
 </html>
